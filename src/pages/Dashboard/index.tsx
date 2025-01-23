@@ -1,1 +1,1 @@
-export { default as Dashboard } from './Controller';
+export { default as Dashboard } from './Connector';
