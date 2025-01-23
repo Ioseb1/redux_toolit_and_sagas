@@ -1,5 +1,5 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
-import { getCatsSuccess } from './reducers';
+import { getCatsSuccess } from './slices';
 
 function* workGetCatsFetch(): any {
   const cats = yield call(() => fetch('https://api.thecatapi.com/v1/breeds'));
