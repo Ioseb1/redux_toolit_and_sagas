@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 
-import { RootState } from '../../store/store';
 import { getCatData } from '../../modules/dashboard/action';
+import type IState from '../../types/state';
 import Controller from './Controller';
 
-const mapStateToProps = (state: RootState) => {
+const mapStateToProps = (state: IState) => {
   return {
-    cats: state['0'].catsData,
-    isLoading: state.isLoading,
+    cats: state.dashboardReducer.catsData,
+    isLoading: state.dashboardReducer.isLoading,
   };
 };
 
