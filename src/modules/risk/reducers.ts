@@ -1,8 +1,8 @@
+import { GET_RISKS_DATA_SUCCESS } from './action-types';
+import initialState from './initialState';
+import type { IDashboardState } from './types';
 import reducerHelper from '../../helpers/reducer';
 import type { IAction } from '../../types/action';
-import type { IDashboardState } from './types';
-import initialState from './initialState';
-import { GET_RISKS_DATA_SUCCESS } from './action-types';
 
 const reduceMap = [GET_RISKS_DATA_SUCCESS];
 

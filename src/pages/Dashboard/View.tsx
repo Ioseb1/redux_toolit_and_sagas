@@ -1,6 +1,7 @@
 import React from 'react';
-import { CatType } from '../../types/CatType';
+
 import { Loader } from '../../components/Loader';
+import { CatType } from '../../types/CatType';
 
 const View = ({ cats, handleButtonClick, isLoading }: CatType) => {
     return (

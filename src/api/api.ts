@@ -2,8 +2,6 @@
 import axios, { AxiosError } from 'axios';
 
 import type { IApiError } from '@types/api';
-
-
 const ENDPOINT_BASE_URL = process.env.REACT_APP_RMT_API_ENDPOINT_URL || 'http://localhost:5173';
 const API_VERSION = process.env.REACT_APP_RMT_API_VERSION || 'api/v1';
 const RESPONSE_FAIL = { success: false, errorStatus: 403 };
