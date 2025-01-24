@@ -1,6 +1,6 @@
-export type Risk = any;
+export type IRisk = any;
 
 export type IRiskState = {
-  risks: Risk[];
+  risks: IRisk[];
   isLoading: boolean;
 };

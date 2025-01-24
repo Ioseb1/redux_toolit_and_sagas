@@ -1,6 +1,8 @@
+import type { IAction } from '@types/action';
+import type { ICommonRecord } from '@types/common';
+
 import { mergeObject } from './utils';
-import type { IAction } from '../types/action';
-import type { ICommonRecord } from '../types/common';
+
 
 const reducer = (
     state: ICommonRecord,

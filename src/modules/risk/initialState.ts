@@ -1,4 +1,4 @@
 export default {
-    catsData: [],
+    risks: [],
     isLoading: false,
 };

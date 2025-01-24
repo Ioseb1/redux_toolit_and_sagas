@@ -22,6 +22,17 @@ export default tseslint.config(
             'react-refresh': reactRefresh,
             'import': importPlugin,
         },
+        ignores: [
+            'node_modules',
+            '.*',
+            '**/*/*.d.ts',
+            'dist/',
+            'mocks/',
+            'coverage/',
+            'setupTest/',
+            'cypress*',
+            '*.config.js'
+        ],
         rules: {
             ...reactHooks.configs.recommended.rules,
             'react-refresh/only-export-components': [
@@ -68,6 +79,7 @@ export default tseslint.config(
                         ["@pages", "./src/pages/"],
                         ["@helpers", "./src/helpers/"],
                         ["@components", "./src/components/"],
+                        ["@constants", "./src/constants/"],
                         ["@store", "./src/store/"],
                         ["@assets", "./src/assets/"],
                         ["@types", "./src/types/"],

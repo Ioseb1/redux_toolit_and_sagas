@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
 
+import type{ IRisk } from '@modules/risk/types';
+
 import View from './View';
 
+
 type IControllerProps = {
-  risks: any;
+  risks: IRisk[];
   isLoading: boolean;
   getCatData: () => void;
 };

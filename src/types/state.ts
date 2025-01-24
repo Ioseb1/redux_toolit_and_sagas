@@ -1,4 +1,4 @@
-import type { IRiskState } from "../modules/risk/types";
+import type { IRiskState } from "@modules/risk/types";
 
 
 export type IState = {

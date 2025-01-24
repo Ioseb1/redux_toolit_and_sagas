@@ -2,8 +2,10 @@
 import axios, { AxiosError } from 'axios';
 
 import type { IApiError } from '@types/api';
-const ENDPOINT_BASE_URL = process.env.REACT_APP_RMT_API_ENDPOINT_URL || 'http://localhost:5173';
-const API_VERSION = process.env.REACT_APP_RMT_API_VERSION || 'api/v1';
+
+
+const ENDPOINT_BASE_URL = import.meta.env.VITE_RMT_API_ENDPOINT_URL || 'http://localhost:3000';
+const API_VERSION = import.meta.env.VITE_RMT_API_VERSION || 'api/v1';
 const RESPONSE_FAIL = { success: false, errorStatus: 403 };
 
 type IAxiosError = {
@@ -37,7 +39,10 @@ const buildErrorResponse = (errorResponse?: IAxiosError): IApiError => {
 
 const get = async (url: string): Promise<any> => {
     try {
-        const response = await axios.get(`${ENDPOINT_BASE_URL}/${API_VERSION}/${url}`, buildHeaders());
+        const response = await axios.get(
+            `${ENDPOINT_BASE_URL}/${API_VERSION}/${url}`,
+            buildHeaders(),
+        );
 
         return response.data;
     } catch (error) {

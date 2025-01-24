@@ -1,9 +1,16 @@
 import React from 'react';
 
-import { Loader } from '../../components/Loader';
-import { CatType } from '../../types/CatType';
+import { Loader } from '@components/Loader';
+import type { IRisk } from '@modules/risk/types';
 
-const View = ({ cats, handleButtonClick, isLoading }: CatType) => {
+
+export type IViewProps = {
+    cats: IRisk[];
+    handleButtonClick: () => void;
+    isLoading: boolean;
+};
+
+const View = ({ cats, handleButtonClick, isLoading }: IViewProps) => {
     return (
         <>
             {isLoading ? (
@@ -12,9 +19,9 @@ const View = ({ cats, handleButtonClick, isLoading }: CatType) => {
                 <>
                     <div className='Gallery'>
                         {cats &&
-              cats.map((cat: CatType) => {
+              cats.map((cat: IRisk, index:number) => {
                   return (
-                      <div key={cat.id} className='row'>
+                      <div key={index} className='row'>
                           <div className='column column-left'></div>
 
                           <div className='column column-right'>

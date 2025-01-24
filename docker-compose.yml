@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "5173:5173"
+  mocks:
+    build:
+      context: .
+      dockerfile: mocks/Dockerfile
+    volumes:
+      - ./mocks:/mocks
+    ports:
+      - "8080:8080"
