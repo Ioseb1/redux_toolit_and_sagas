@@ -1,4 +1,4 @@
 export default {
-  catsData: [],
-  isLoading: false,
+    catsData: [],
+    isLoading: false,
 };

@@ -7,8 +7,8 @@ import { GET_RISKS_DATA_SUCCESS } from './action-types';
 const reduceMap = [GET_RISKS_DATA_SUCCESS];
 
 const reducer = (
-  state: IDashboardState = initialState,
-  action: IAction
+    state: IDashboardState = initialState,
+    action: IAction
 ): Record<string, unknown> => reducerHelper(state, action, reduceMap);
 
 export default reducer;

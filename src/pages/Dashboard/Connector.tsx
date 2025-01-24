@@ -6,14 +6,14 @@ import Controller from './Controller';
 
 
 const mapStateToProps = (state: IState) => {
-  return {
-    risks: state.riskReducer.risks,
-    isLoading: state.riskReducer.isLoading,
-  };
+    return {
+        risks: state.riskReducer.risks,
+        isLoading: state.riskReducer.isLoading,
+    };
 };
 
 const mapActionsToProps = {
-  getCatData,
+    getCatData,
 };
 
 export default connect(mapStateToProps, mapActionsToProps)(Controller);

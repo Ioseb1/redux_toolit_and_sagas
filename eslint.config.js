@@ -1,24 +1,16 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from 'typescript-eslint';
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
-  // { ignores: ['dist'] },
+  { ignores: ['dist'] },
   {
     extends: [
-      // js.configs.recommended,
-      // ...tseslint.configs.recommended
-      'eslint:recommended',
-      'plugin:@typescript-eslint/recommended',
-      'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    ],
-    parseOptions: {
-      tsconfigRootDir: __dirname,
-      project: ['./tsconfig.json'],
-    },
-    ignorePatterns: ['node_modules', 'dist', '*.config.js'],
+        js.configs.recommended, 
+        ...tseslint.configs.recommended,
+],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -34,8 +26,11 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      semi: [2, 'always'],
-      indent: ['error', 4],
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/unbound-method": "off",
+      "semi": [2, "always"],
+      "indent": ["error", 4]
     },
-  }
-);
+  },
+)

@@ -9,21 +9,21 @@ type IControllerProps = {
 };
 
 const Controller = ({ risks, isLoading, getCatData }: IControllerProps) => {
-  useEffect(() => {
-    getCatData();
-  }, []);
+    useEffect(() => {
+        getCatData();
+    }, []);
 
-  const handleButtonClick = () => {
-    alert('Load more data!');
-  };
+    const handleButtonClick = () => {
+        alert('Load more data!');
+    };
 
-  return (
-    <View
-      cats={risks}
-      handleButtonClick={handleButtonClick}
-      isLoading={isLoading}
-    />
-  );
+    return (
+        <View
+            cats={risks}
+            handleButtonClick={handleButtonClick}
+            isLoading={isLoading}
+        />
+    );
 };
 
 export default Controller;

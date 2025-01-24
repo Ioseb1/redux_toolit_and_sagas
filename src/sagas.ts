@@ -1,7 +1,8 @@
 import { all, fork } from 'redux-saga/effects';
 
-import catSaga from './modules/risk/sagas';
+import riskSaga from '@modules/risk/sagas';
+
 
 export default function* rootSaga() {
-  yield all([fork(catSaga)]);
+    yield all([fork(riskSaga)]);
 }

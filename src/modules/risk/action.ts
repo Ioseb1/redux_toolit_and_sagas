@@ -6,6 +6,6 @@ interface IAction<P = unknown> {
 }
 
 export const getCatData = (): IAction => ({
-  type: GET_RISKS_DATA,
-  payload: {},
+    type: GET_RISKS_DATA,
+    payload: {},
 });

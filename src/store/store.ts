@@ -6,8 +6,8 @@ import rootSaga from '../sagas';
 
 const saga = createSagaMiddleware();
 export const store = configureStore({
-  reducer: rootReducers,
-  middleware: () => new Tuple(saga),
+    reducer: rootReducers,
+    middleware: () => new Tuple(saga),
 });
 saga.run(rootSaga);
 
