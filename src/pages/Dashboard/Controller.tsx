@@ -3,12 +3,12 @@ import { useEffect } from 'react';
 import View from './View';
 
 type IControllerProps = {
-  cats: any;
+  risks: any;
   isLoading: boolean;
   getCatData: () => void;
 };
 
-const Controller = ({ cats, isLoading, getCatData }: IControllerProps) => {
+const Controller = ({ risks, isLoading, getCatData }: IControllerProps) => {
   useEffect(() => {
     getCatData();
   }, []);
@@ -19,7 +19,7 @@ const Controller = ({ cats, isLoading, getCatData }: IControllerProps) => {
 
   return (
     <View
-      cats={cats}
+      cats={risks}
       handleButtonClick={handleButtonClick}
       isLoading={isLoading}
     />

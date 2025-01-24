@@ -1,9 +1,8 @@
-import type { IDashboardState } from "../modules/dashboard/types";
-
+import type { IRiskState } from "../modules/risk/types";
 
 
 export type IState = {
-    dashboardReducer: IDashboardState
+    riskReducer: IRiskState
 }
 
 export default IState;

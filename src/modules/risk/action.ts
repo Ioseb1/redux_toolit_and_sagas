@@ -1,11 +1,11 @@
-import { GET_CATS_DATA } from './action-types';
+import { GET_RISKS_DATA } from './action-types';
 
 interface IAction<P = unknown> {
-  type: typeof GET_CATS_DATA;
+  type: typeof GET_RISKS_DATA;
   payload: Record<string, P>;
 }
 
 export const getCatData = (): IAction => ({
-  type: GET_CATS_DATA,
+  type: GET_RISKS_DATA,
   payload: {},
 });

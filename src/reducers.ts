@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import dashboardReducer from './modules/dashboard/reducers';
+import riskReducer from './modules/risk/reducers';
 
 const reducers = {
-    dashboardReducer,
+    riskReducer,
 };
 
 export default combineReducers(reducers);
