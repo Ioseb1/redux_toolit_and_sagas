@@ -27,7 +27,7 @@ export default tseslint.config(
             '.*',
             '**/*/*.d.ts',
             'dist/',
-            'mocks/',
+            'mocks/**/*',
             'coverage/',
             'setupTest/',
             'cypress*',

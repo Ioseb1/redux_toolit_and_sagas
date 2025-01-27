@@ -1,4 +1,6 @@
-export type IRisk = any;
+export type IRisk = {
+  description: string;
+};
 
 export type IRiskState = {
   risks: IRisk[];

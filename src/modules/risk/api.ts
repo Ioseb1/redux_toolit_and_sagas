@@ -1,4 +1,5 @@
 import baseAPI from '@api/api';
+
 import apiUrls from '@constants/api';
 
 import { IRisk } from './types';

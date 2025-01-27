@@ -5,7 +5,7 @@ interface IAction<P = unknown> {
   payload: Record<string, P>;
 }
 
-export const getCatData = (): IAction => ({
+export const getRisks = (): IAction => ({
     type: GET_RISKS_DATA,
     payload: {},
 });

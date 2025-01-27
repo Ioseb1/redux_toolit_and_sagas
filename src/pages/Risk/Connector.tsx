@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { getCatData } from '@modules/risk/action';
+import { getRisks } from '@modules/risk/action';
 import type IState from '@types/state';
 
 import Controller from './Controller';
@@ -14,7 +14,7 @@ const mapStateToProps = (state: IState) => {
 };
 
 const mapActionsToProps = {
-    getCatData,
+    getRisks,
 };
 
 export default connect(mapStateToProps, mapActionsToProps)(Controller);

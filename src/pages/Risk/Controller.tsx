@@ -8,13 +8,13 @@ import View from './View';
 type IControllerProps = {
   risks: IRisk[];
   isLoading: boolean;
-  getCatData: () => void;
+  getRisks: () => void;
 };
 
-const Controller = ({ risks, isLoading, getCatData }: IControllerProps) => {
+const Controller = ({ risks, isLoading, getRisks }: IControllerProps) => {
     useEffect(() => {
-        getCatData();
-    }, []);
+        getRisks();
+    }, [getRisks]);
 
     const handleButtonClick = () => {
         alert('Load more data!');
